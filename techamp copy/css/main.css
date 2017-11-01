@@ -861,6 +861,14 @@ justify-content: center;
   //background-color: pink;
 }
 
+.price-image{
+
+    //background-color: red;
+    width: 75px;
+    margin: auto;
+
+}
+
 .pm-pricing-table-title-container {
   width: 100%;
   min-height: 75px;
