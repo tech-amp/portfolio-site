@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+    <head>
+        
+        <!-- meta Data -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- title -->
+        <title>TechAmp</title>
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/default_theme.css" />
+        <link rel="stylesheet" href="css/light_template.css" />
+        
+        <!-- Plugins -->
+        <link rel="stylesheet" href="css/lightbox.min.css" />
+        <link rel="stylesheet" href="css/swiper.min.css" />
+        
+        <!-- google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400" />
+
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <script>
+            // Ajax function
+            
+            function _(id) {
+
+                return document.getElementById(id);
+
+            }
+
+            function submitForm() {
+
+                _("btn").disabled = true;
+                _("status").innerHTML = 'please wait ...';
+
+                var formdata = new FormData(),
+                    ajax = new XMLHttpRequest();
+
+                formdata.append("name", _("name").value);
+                formdata.append("email", _("email").value);
+                formdata.append("subj", _("subj").value);
+                formdata.append("msg", _("msg").value);
+
+                ajax.open("POST", "contact.php");
+                ajax.onreadystatechange = function () {
+
+                    if (ajax.readyState === 4 && ajax.status === 200) {
+
+                        if (ajax.responseText === "success") {
+
+                            _("my_form").innerHTML = '<h2>Thanks ' + _("name").value + ',<br> <br> your message has been sent.</h2>';
+
+                        } else {
+
+                            _("status").innerHTML = ajax.responseText;
+                            _("btn").disabled = false;
+
+                        }
+                    }
+                };
+
+                ajax.send(formdata);
+            }
+        </script>
+    </head>
+    <body>
+        
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+
+                  <a href="http://www.techamp.ie">
+                      <span class="bg_logo">
+                          <img src="images/logo.png" class="TAlogo">
+                      </span>
+
+                      <!-- You Can Edit the image on main.css file just search ( bg_logo_dark ) -->
+                  </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home" data-value="home" class="active">Home</a></li>
+                        <li><a href="#about" data-value="about">About Us</a></li>
+                        <li><a href="#serv" data-value="serv">Services</a></li>
+                        <li><a href="#work" data-value="work">Work</a></li>
+                        <li><a href="#contact" data-value="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- End Navbar -->
+        
+        <!-- Start Header -->
+        
+        <section id="home" class="home">
+            <div class="overlay-home">
+                <div id="particles-js" class="particles">
+                    <div class="title text-center">
+                        <h1>Hi, looking for <br/> a website?</h1> <!-- Here The Title Of Template -->
+                        <p class="type"></p> <!-- You Can Edit the title on the custom.js File -->
+                         <div class="bt">
+                            <div class="buttons ">
+                                <a id="bt-main" href="#contact">Check out our work</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+
+        <!-- Btn link to Portfolio -->
+        
+       
+
+        <!-- End Header -->
+        
+        <!-- Start About -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="title text-center">
+                    <h1>About us</h1>
+                    <div class="line"></div>
+                </div>
+
+                <div class="infos">
+                    <div class="row">
+                     <div class="col-md-6 col-sm-12 parag">
+
+                            <div class="image-box">
+                                <div class="image">
+                                    <img src="images/durval.png" class="img-responsive" alt="image Personel"/>
+                                </div>
+                            </div>
+                            
+
+<p>Hi! We are Durval and Pete: a group of freelancers setting out on a journey! Our dream
+is to work on projects that we love, cultivate our skills every day, and meet amazing people
+along the way!</p>
+
+<p>We have a passion for design and development, and are confident that we can help you with
+our insights. A main component of our work process is planning business strategy, social media marketing,
+and digital impression to capture leads for your project.</p>
+
+
+                            <p></p>
+                             <div class="row">
+                                <div class="col-xs-6 title-info">
+                                    <p>Social Media</p>                                    
+                                </div>
+                                <div class="col-xs-6 info-perso">
+                                    <div class="social-media">
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> 
+                                               <!-- Edit ^ Your website -->
+                                        <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                     </div>                        
+                     <div class="col-md-6 col-sm-12 parag">
+                    <div class="image-box">
+                   
+                    <div class="image">
+                        <img src="images/peter.png" class="img-responsive" alt="image Personel"/>
+                    </div>
+                </div>
+                            <p>Our main area of expertise is in web development. This covers the basics (HTML5, CSS3, JS/jQuery)
+  of course, but we also have experience in back end development using Python and PHP. We can use a
+ a variety of frameworks, including Angular and Django.</p>
+
+<p>Another area we can help you with is building a web-site on an existing CMS (Content Management System) such
+as Wordpress, Wix, etc. Some clients prefer to use a CMS as it enables intuitive content addition
+after the site has been created!</p>
+
+                            <p></p>
+                             <div class="row">
+                                <div class="col-xs-6 title-info">
+                                    <p>Social Media</p>                                    
+                                </div>
+                                <div class="col-xs-6 info-perso">
+                                    <div class="social-media">
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> 
+                                               <!-- Edit ^ Your website -->
+                                        <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                     </div>
+                    </div>
+                    </div>
+                </div>
+                    <div class="bt-wrapper">
+                        <div class="buttons">
+                            <a href="#contact">Hire Us</a>
+                        </div>
+                    </div>
+
+            </div>
+
+        </section>
+        
+        <!-- End About -->
+        
+        
+        <!-- Start Stat -->
+
+        <!--
+        <section class="stat text-center">
+            <div class="overlay">
+            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12 number">
+                            <i class="fa fa-heart"></i>
+                            <span class="counter">1200</span>
+                            <p>Happy Client</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 number">
+                            <i class="fa fa-coffee"></i>
+                            <span class="counter">154</span>
+                            <p>Cup Of Coffe</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 number">
+                            <i class="fa fa-check-square-o"></i>
+                            <span class="counter">102</span>
+                            <p>Successful Projects</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 number">
+                            <i class="fa fa-trophy"></i>
+                            <span class="counter">320</span>
+                            <p>Award Won</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        -->
+        
+        <!-- End Stat -->
+        
+        
+        <!-- Start Services -->
+        <section id="serv" class="serv text-center">
+            <div class="container">
+                <div class="title text-center">
+                    <h1>Services</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="infos">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/levels.png" class="img-responsive" alt="Services 1" />
+                        <h3>Web Design</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/internet.png" class="img-responsive" alt="Services 2" />
+                        <h3>Branding</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/layer.png" class="img-responsive" alt="Services 3" />
+                        <h3>Graphic Design</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <!--******************-->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/devices.png" class="img-responsive" alt="Services 4" />
+                        <h3>Responsive Design</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/loupe.png" class="img-responsive" alt="Services 5" />
+                        <h3>Marketing</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/chaat.png" class="img-responsive" alt="Services 6" />
+                        <h3>Customer Support</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Services -->
+        
+        
+        <!-- Start Testim -->
+        <section class="testim text-center">
+            <div class="overlay"></div>
+            <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <p></p>
+                <i class="fa fa-quote-right"></i>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <q>These guys are incredible! They helped with both website design, and social media marketing strategy! Highly recommended!</q>
+                        <span>Kelly Baldonado</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <q>These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</q>
+                        <span>Lauren Dix</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <q>These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</q>
+                        <span>Mike Petrucci</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <q>These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</q>
+                        <span>Joshua Earle</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"  id="portfolioHeader"></div>
+            
+        </section>
+        
+        <!-- End Testim -->
+        
+        
+        <!-- Start Work -->
+        <section id="work" class="work">
+            <div class="container">
+                <div class="title text-center">
+                    <h1>Portfolio</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="info">
+                    <div class="items-box">
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item text-center">
+                                    <div class="over">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://kbfitness.ie/" data-lightbox="image-1" data-title="Project Title"> 
+                                                <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="images/portfolio/kbfitness.png" alt="imgPort1" class="img-responsive">
+                                        <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort2" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort3" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort4" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort5" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort6" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ********************* Start Add New Gallery ********************* -->
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item less">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort1" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item less">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort2" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item less">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort3" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ********************* End Add New Gallery ********************* -->
+                        <!-- To Add New images just copy This part ^ and past it down this and edit it  -->
+                    </div>
+                    <button class="show-more upper">Show More</button>
+                    <button class="show-less upper">Show Less</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Work -->
+
+
+ 
+ <!-- Start Pricing -->
+        <section id="pricing" class="price text-center">
+            <div class="container">
+                <div class="title text-center">
+                    <h1>Our Packeges</h1>
+                    <div class="line"></div>
+                </div>
+                 <div class="container price-main-box">
+        
+                <div class="row">
+                
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        
+ <!-- pricing table 1 -->
+                        <div class="pm-pricing-table-container">
+                            <div class="pm-pricing-table-title-container">
+                                <p>Intermediate package1</p>
+                                 <div class="line"></div>
+                            </div>
+                            <div class="pm-pricing-table-pricing-container">
+                                <p class="price">$29.99 <sub>/ mo</sub></p>
+                                <p class="desc">Choose to pay monthly or annually at a discounted price of $299.99</p>
+                            </div>
+                            
+                            <ul class="pm-pricing-table-details-list">
+                                <li>                                   
+                                    <div class="pm-pricing-table-details-container">                                    
+                                        <p class="title">iOS 8 DESIGN</p>
+                                        <p class="sub-title">Fundamentals</p>                                
+                                    </div>
+                                </li>
+                                <li>                                    
+                                    <div class="pm-pricing-table-details-container">
+                                        <p class="title">Desktop vs mobile</p>
+                                        <p class="sub-title">Building a full responsive layout</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pm-pricing-table-details-container">                                    
+                                        <p class="title">Swift</p>
+                                        <p class="sub-title">Advanced oop programming</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pm-pricing-table-details-container">                                    
+                                        <p class="title">Portfolio</p>
+                                        <p class="sub-title">Design, construction &amp;  feedback</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- pricing table 1 end -->
+                        
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        
+                        <!-- pricing table 1 -->
+                        <div class="pm-pricing-table-container">
+                        
+                            <div class="pm-pricing-table-title-container">
+                                <p>Intermediate package 2</p>
+                                 <div class="line"></div>
+                            </div>
+                            
+                            <div class="pm-pricing-table-pricing-container">
+                                <p class="price">$29.99 <sub>/ mo</sub></p>
+                                <p class="desc">Choose to pay monthly or annually at a discounted price of $299.99</p>
+                            </div>
+                            
+                           <ul class="pm-pricing-table-details-list">
+                                <li>                                   
+                                    <div class="pm-pricing-table-details-container">                                    
+                                        <p class="title">iOS 8 DESIGN</p>
+                                        <p class="sub-title">Fundamentals</p>                                
+                                    </div>
+                                </li>
+                                <li>                                    
+                                    <div class="pm-pricing-table-details-container">
+                                        <p class="title">Desktop vs mobile</p>
+                                        <p class="sub-title">Building a full responsive layout</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pm-pricing-table-details-container">                                    
+                                        <p class="title">Swift</p>
+                                        <p class="sub-title">Advanced oop programming</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pm-pricing-table-details-container">                                    
+                                        <p class="title">Portfolio</p>
+                                        <p class="sub-title">Design, construction &amp;  feedback</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                           
+                        
+                        </div><!-- pricing table 1 end -->
+                        
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        
+                        <!-- pricing table 1 -->
+                        <div class="pm-pricing-table-container">
+                        
+                            <div class="pm-pricing-table-title-container">
+                                <p>Intermediate package 3</p>
+                                 <div class="line"></div>
+                            </div>
+                            
+                            <div class="pm-pricing-table-pricing-container">
+                                <p class="price">$29.99 <sub>/ mo</sub></p>
+                                <p class="desc">Choose to pay monthly or annually at a discounted price of $299.99</p>
+                            </div>
+                            
+                           <ul class="pm-pricing-table-details-list">
+                                <li>                                   
+                                    <div class="pm-pricing-table-details-container">                                    
+                                        <p class="title">iOS 8 DESIGN</p>
+                                        <p class="sub-title">Fundamentals</p>                                
+                                    </div>
+                                </li>
+                                <li>                                    
+                                    <div class="pm-pricing-table-details-container">
+                                        <p class="title">Desktop vs mobile</p>
+                                        <p class="sub-title">Building a full responsive layout</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pm-pricing-table-details-container">                                    
+                                        <p class="title">Swift</p>
+                                        <p class="sub-title">Advanced oop programming</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pm-pricing-table-details-container">                                    
+                                        <p class="title">Portfolio</p>
+                                        <p class="sub-title">Design, construction &amp;  feedback</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                           
+                        
+                        </div><!-- pricing table 1 end -->
+                        
+                    </div>
+                
+                </div>
+            
+            </div>
+            </div>
+        </section>
+        
+        <!-- End Services -->
+
+
+
+        
+        
+        <!-- Start Contact -->
+        <section id="contact" class="contact">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="title text-center">
+                    <h1>Contact</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="infos text-center">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12 commun">
+                            <i class="fa fa-envelope-o"></i>
+                            <span>Email</span>
+                            <a href="mailto:techamplitude@gmail.com">techamplitude@gmail.com</a>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 commun">
+                            <i class="fa fa-phone"></i>
+                            <span>Phone</span>
+                            <a href="tel:+123-345-9982">+353 89206 9350</a>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 commun">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Address</span>
+                            <a>41 Ryders Row, Dublin</a>
+                        </div>
+                    </div>
+                    <form id="my_form" method="post"  onsubmit="submitForm(); return false;">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <input id="name" type="text" name="name" placeholder="Your Name" required/>
+                                <input id="email" type="email" name="email" placeholder="E-mail" required/>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="message">
+                                    <textarea id="msg" placeholder="Write Your message here ..." required></textarea>
+                                </div>
+                            </div>
+                            <p><input id="btn" type="submit" value="Send Message" /><span id="status"></span></p>
+                        </div>
+                    </form>
+                </div>
+                <!-- Start Footer -->
+                <footer class="text-center">
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> 
+                               <!-- Edit ^ Your website -->
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
+                        <a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a>
+                    </div>
+                    <div class="copyright">
+                        <p>© Copyright 2017. </p>
+                        <p>All Right Reserved By <span>TechAmp</span></p>
+                    </div>
+                </footer>
+                <!-- End Footer -->
+            </div>
+        </section>
+        
+        <!-- End Contact -->
+        
+        <!-- Start SrollTop -->
+        
+        <div class="scrolltop">
+            <i class="fa fa-angle-double-up"></i>
+        </div>
+        
+        <!-- End SrollTop -->
+        
+        <!-- Start Loading -->
+        
+        <section class="loading-overlay">
+            <div class="cssload-loader">
+                <div class="cssload-inner cssload-one"></div>
+                <div class="cssload-inner cssload-two"></div>
+                <div class="cssload-inner cssload-three"></div>
+            </div>
+        </section>
+        
+        <!-- End Loading -->
+        
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/typed.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/particles.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
