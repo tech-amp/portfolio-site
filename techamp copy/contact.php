@@ -6,7 +6,7 @@
         $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
         $subj = filter_var($_POST["subj"], FILTER_SANITIZE_STRING);
         $msg = filter_var($_POST["msg"], FILTER_SANITIZE_STRING);
-        $to = "durvalbatista@yahoo.com.br";	 // Tape Your Email Here 
+        $to = "techamplitude@gmail.com";	 // Tape Your Email Here 
         $from = $email;
         $subject = 'Contact Form from website'; // Tape Title Of Message Here
         $message = '<b>Name:</b> '.$name.' <br><b>Email:</b> '.$email.' <br><b>Subject:</b> '.$subj.' <p>'.$msg.'</p>';
@@ -16,7 +16,7 @@
         
         if( mail($to, $subject, $message, $headers) ){
             
-            echo "success";
+            header("Location:index.html");
             
         } else {
             
@@ -26,3 +26,4 @@
     }
 
 ?>
+

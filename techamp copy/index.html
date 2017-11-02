@@ -91,7 +91,9 @@
 
                   <a href="http://www.techamp.ie">
                       <span class="bg_logo">
-                          <img src="images/logo.png" class="TAlogo">
+                          <h2 class="TAlogo">
+                          TechAmp
+                          </h2>
                       </span>
 
                       <!-- You Can Edit the image on main.css file just search ( bg_logo_dark ) -->
@@ -716,7 +718,7 @@ after the site has been created!</p>
                             <a>41 Ryders Row, Dublin</a>
                         </div>
                     </div>
-                    <form id="my_form" method="post"  onsubmit="submitForm(); return false;">
+                    <form id="my_form" method="post"  action="contact.php" >
                         <div class="row">
                             <div class="col-sm-6 col-xs-12">
                                 <input id="name" type="text" name="name" placeholder="Your Name" required/>
@@ -724,7 +726,7 @@ after the site has been created!</p>
                             </div>
                             <div class="col-sm-6 col-xs-12">
                                 <div class="message">
-                                    <textarea id="msg" placeholder="Write Your message here ..." required></textarea>
+                                    <textarea id="msg" name="msg" placeholder="Write Your message here ..." required></textarea>
                                 </div>
                             </div>
                             <p><input id="btn" type="submit" value="Send Message" /><span id="status"></span></p>

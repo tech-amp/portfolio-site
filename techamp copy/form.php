@@ -1,13 +1,15 @@
 <?php 
 if ($_POST["email"]<>'') { 
     $ToEmail = 'techamplitude@gmail.com'; 
-    $EmailSubject = 'NEW USER DIET REQUEST'; 
+    $EmailSubject = 'Contact from Website'; 
     $mailheader = "From: ".$_POST["email"]."\r\n"; 
     $mailheader .= "Reply-To: ".$_POST["email"]."\r\n"; 
     $mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
     $MESSAGE_BODY = "Name: ".$_POST["name"]."<br>"; 
+    $MESSAGE_BODY .= "Comment: ".$_POST["msg"]."<br>"; 
     $MESSAGE_BODY .= "Email: ".$_POST["email"].""; 
  
+
     mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure"); 
 ?> 
 Your message was sent
@@ -26,7 +28,7 @@ Your message was sent
 </tr>
 <tr>
 <td class="bodytext">Comment:</td>
-<td><textarea name="comment" cols="45" rows="6" id="comment" class="bodytext"></textarea></td>
+<td><textarea name="msg" cols="45" rows="6" id="msg" class="bodytext"></textarea></td>
 </tr>
 <tr>
 <td class="bodytext"> </td>
