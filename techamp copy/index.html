@@ -91,7 +91,9 @@
 
                   <a href="http://www.techamp.ie">
                       <span class="bg_logo">
-                          <img src="images/logo.png" class="TAlogo">
+                          <h2 class="TAlogo">
+                          TechAmp
+                          </h2>
                       </span>
 
                       <!-- You Can Edit the image on main.css file just search ( bg_logo_dark ) -->
@@ -103,6 +105,7 @@
                         <li><a href="#about" data-value="about">About Us</a></li>
                         <li><a href="#serv" data-value="serv">Services</a></li>
                         <li><a href="#work" data-value="work">Work</a></li>
+                        <li><a href="#packages" data-value="packages">Packages</a></li>
                         <li><a href="#contact" data-value="contact">Contact</a></li>
                     </ul>
                 </div>
@@ -228,7 +231,7 @@ after the site has been created!</p>
 
         <!-- Start Stat -->
 
-        <!--
+        
         <section class="stat text-center">
             <div class="overlay">
             </div>
@@ -257,8 +260,13 @@ after the site has been created!</p>
                     </div>
                 </div>
         </section>
+<<<<<<< HEAD
+        
+        
+=======
         -->
 
+>>>>>>> origin
         <!-- End Stat -->
 
 
@@ -513,7 +521,7 @@ after the site has been created!</p>
 
 
  <!-- Start Pricing -->
-        <section id="pricing" class="price text-center">
+        <section id="packages" class=" packages price text-center">
             <div class="container">
                 <div class="title text-center">
                     <h1>Our Packeges</h1>
@@ -528,11 +536,15 @@ after the site has been created!</p>
  <!-- pricing table 1 -->
                         <div class="pm-pricing-table-container">
                             <div class="pm-pricing-table-title-container">
-                                <p>Intermediate package1</p>
+                                <div class="price-image">
+                                    <img src="images/icons/loupe.png" class="img-responsive" alt="package1" />
+                                </div>
+                                <h3>Custom</h3> 
+                               
                                  <div class="line"></div>
                             </div>
                             <div class="pm-pricing-table-pricing-container">
-                                <p class="price">$29.99 <sub>/ mo</sub></p>
+                               <!-- <p class="price">$29.99 <sub>/ mo</sub></p> -->
                                 <p class="desc">Choose to pay monthly or annually at a discounted price of $299.99</p>
                             </div>
 
@@ -572,12 +584,15 @@ after the site has been created!</p>
                         <div class="pm-pricing-table-container">
 
                             <div class="pm-pricing-table-title-container">
-                                <p>Intermediate package 2</p>
+                                   <div class="price-image">
+                                    <img src="images/icons/loupe.png" class="img-responsive" alt="package1" />
+                                </div>
+                                <h3>Custom</h3> 
                                  <div class="line"></div>
                             </div>
 
                             <div class="pm-pricing-table-pricing-container">
-                                <p class="price">$29.99 <sub>/ mo</sub></p>
+                               <!-- <p class="price">$29.99 <sub>/ mo</sub></p> -->
                                 <p class="desc">Choose to pay monthly or annually at a discounted price of $299.99</p>
                             </div>
 
@@ -620,12 +635,15 @@ after the site has been created!</p>
                         <div class="pm-pricing-table-container">
 
                             <div class="pm-pricing-table-title-container">
-                                <p>Intermediate package 3</p>
+                                <div class="price-image">
+                                    <img src="images/icons/loupe.png" class="img-responsive" alt="package1" />
+                                </div>
+                                <h3>Custom</h3> 
                                  <div class="line"></div>
                             </div>
 
                             <div class="pm-pricing-table-pricing-container">
-                                <p class="price">$29.99 <sub>/ mo</sub></p>
+                             <!--   <p class="price">$29.99 <sub>/ mo</sub></p> -->
                                 <p class="desc">Choose to pay monthly or annually at a discounted price of $299.99</p>
                             </div>
 
@@ -700,7 +718,7 @@ after the site has been created!</p>
                             <a>41 Ryders Row, Dublin</a>
                         </div>
                     </div>
-                    <form id="my_form" method="post"  onsubmit="submitForm(); return false;">
+                    <form id="my_form" method="post"  action="contact.php" >
                         <div class="row">
                             <div class="col-sm-6 col-xs-12">
                                 <input id="name" type="text" name="name" placeholder="Your Name" required/>
@@ -708,7 +726,7 @@ after the site has been created!</p>
                             </div>
                             <div class="col-sm-6 col-xs-12">
                                 <div class="message">
-                                    <textarea id="msg" placeholder="Write Your message here ..." required></textarea>
+                                    <textarea id="msg" name="msg" placeholder="Write Your message here ..." required></textarea>
                                 </div>
                             </div>
                             <p><input id="btn" type="submit" value="Send Message" /><span id="status"></span></p>

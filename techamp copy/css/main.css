@@ -106,17 +106,21 @@ h1 {
 ===========================================================*/
 
 .TAlogo {
-    position: absolute;
-    opacity: .5;
-    height: 50px;
-    border: solid 1px white;
-    border-radius: 2px;
-    box-shadow: 0 0 1.2em lightgrey;
+    //position: absolute;
+    //opacity: .5;
+    //background-color: green;
+    //height: 50px;
+    //border: solid 1px white;
+    //border-radius: 2px;
+    //box-shadow: 0 0 1.2em lightgrey;
 }
 
 .navbar-default {
     border: none;
     background-color: transparent;
+    display: flex;
+    align-items: baseline;
+
 }
 
 .navbar-collapse ul li a {
@@ -165,13 +169,16 @@ nav.shrink .navbar-nav>li>a {
     background-repeat: no-repeat;
     background-size: 120px;
     background-repeat: no-repeat;
-    background-position-y: 16px;
-    width: 142px;
-    height: 57px;
+    //background-position-y: 16px;
+    //width: 142px;
+    //height: 57px;
     margin-left: 15px;
     display: block;
     color: white;
-    position: relative;
+    //padding-left: 50px;
+    //position: relative;
+    //background-color: pink;
+
 }
 
 .navbar .navbar-header a .bg_logo_dark {
@@ -859,6 +866,14 @@ justify-content: center;
   //-webkit-border-radius: 16px;
   //-o-border-radius: 16px; 
   //background-color: pink;
+}
+
+.price-image{
+
+    //background-color: red;
+    width: 75px;
+    margin: auto;
+
 }
 
 .pm-pricing-table-title-container {
