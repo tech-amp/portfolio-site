@@ -1,21 +1,4 @@
-/*
-***************************************************** /
 
-* Theme Name: Adana
-
-* Theme URI: http://Adana.eb2a.com/
-
-* Author: Bouthaina
-
-* Author URI: https://themeforest.net/user/bouthaina09
-
-* Description:  Adana - One Page Responsive Template
-
-* Version: 1.0.0
-
-* Tags: html5, css3, jquery, bootstrap, theme, template, modern, responsive, cv, resume
-
-*****************************************************/
 
 /*
 |------------------------------------------------------
@@ -225,7 +208,7 @@ nav.shrink .navbar-nav>li>a {
 }
 
 .home .particles {
-    background-image: url(../images/dublin.jpg); /* Here You Can Edit the image of Header (Background Particles)  */
+    background-image: url(../images/computer.jpg); /* Here You Can Edit the image of Header (Background Particles)  */
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
